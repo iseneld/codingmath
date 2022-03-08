@@ -6,21 +6,24 @@ window.onload = function () {
 
   centerX = width / 2;
   centerY = height / 2;
-  radius = 300;
+  xradius = 300;
+  yradius = 500;
   xangle = 0;
   yangle = 0;
-  xspeed = 0.05;
-  yspeed = 0.07;
+  xspeed = 0.03;
+  yspeed = 0.01;
 
   render();
 
   function render() {
-    x = centerX + Math.cos(xangle) * radius;
-    y = centerY + Math.sin(yangle) * radius;
+    x = centerX + Math.cos(xangle) * xradius;
+    y = centerY + Math.sin(yangle) * yradius;
 
+    context.fillStyle =
+      "rgba(" + y + ", " + xradius / 2 + ", " + x + ", " + 0.9 + ")";
     context.clearRect(0, 0, width, height);
     context.beginPath();
-    context.arc(x, y, 20, 0, Math.PI * 2, false);
+    context.arc(x, y, 80, 0, Math.PI * 2, false);
     context.fill();
 
     xangle += xspeed;
