@@ -1,4 +1,4 @@
-# codingmath
+# Coding Math
 Experiments made while following a series of 56 videos by Keith Peters on trigonometry and math relevant to programming animations.
 
 ## How to use
