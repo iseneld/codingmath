@@ -30,4 +30,10 @@ window.onload = function () {
     context.restore();
     requestAnimationFrame(render);
   }
+
+  document.body.addEventListener("mousemove", (e) => {
+    dx = e.clientX - arrowX;
+    dy = e.clientY - arrowY;
+    angle = Math.atan2(dy, dx);
+  });
 };
